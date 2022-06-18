@@ -25,7 +25,7 @@
                          "main main main"
                          "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 700px 1180px 100px;
+    grid-template-rows: 100px 700px 1010px 100px;
     height: 100%;
     width: 100%;
     gap: 10px;
@@ -39,7 +39,7 @@
                          "formulario formulario formulario"
                          "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 700px 1180px 500px 100px;
+    grid-template-rows: 100px 700px 1010px 200px 100px;
     height: 100%;
     width: 100%;
     gap: 10px;
@@ -129,13 +129,19 @@
 }
 
 /* estilado de minibio */
-.minibio{
+.minibio1{
     grid-area: main;
     height: 1180px;
     width: 100%;
 }
-/* .galeria1 */
-.minibio .galeria1{
+.minibio2{
+    grid-area: main;
+    height: 1010px;
+    width: 100%;
+}
+
+/* .minibio1 */
+.minibio1 .galeria{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 500px 90px 500px 90px;
@@ -145,7 +151,7 @@
     justify-content: center;
     align-content: center;                     
 }
-.minibio .galeria1 .imagen1{
+.minibio1 .galeria .imagen1{
     grid-column: 1;
     grid-row: 1;
     height: 500px;
@@ -154,7 +160,7 @@
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria1 .imagen2{
+.minibio1 .galeria .imagen2{
     grid-column: 2;
     grid-row: 1;
     height: 500px;
@@ -163,7 +169,7 @@
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria1 .texto1{
+.minibio1 .galeria .texto1{
     grid-column: 1/3;
     grid-row: 2;
     height: 90px;
@@ -176,7 +182,7 @@
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria1 .imagen3{
+.minibio1 .galeria .imagen3{
     grid-column: 1;
     grid-row: 3;
     height: 500px;
@@ -185,7 +191,7 @@
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria1 .imagen4{
+.minibio1 .galeria .imagen4{
     grid-column: 2;
     grid-row: 3;
     height: 500px;
@@ -194,7 +200,7 @@
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria1 .texto2{
+.minibio1 .galeria .texto2{
     grid-column: 1/3;
     grid-row: 4;
     height: 90px;
@@ -207,55 +213,56 @@
     justify-self: center;
     align-self: center;
 }
-/* .galeria2 */
-.minibio .galeria2{
+
+/* .minibio2 */
+.minibio2 .galeria{
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 500px 500px;
     grid-gap: 10px;
     align-items: stretch;
     justify-items: stretch;
     justify-content: center;
     align-content: center;                     
 }
-.minibio .galeria2 .imagen1{
+.minibio2 .galeria .imagen1{
     grid-column: 1;
     grid-row: 1;
-    height: 500px;
+    height: 100%;
     width: auto;
     padding: 25px;
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria2 .imagen2{
+.minibio2 .galeria .imagen2{
     grid-column: 1;
     grid-row: 2;
-    height: 500px;
+    height: 100%;
     width: auto;
     padding: 5px;
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria2 .texto1{
+.minibio2 .galeria .texto1{
     grid-column: 2;
     grid-row: 1;
     height: auto;
     width: auto;
     padding: 10px;
-    color: black;
+    color: whitesmoke;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size:medium;
     text-align: center;
     justify-self: center;
     align-self: center;
 }
-.minibio .galeria2 .texto2{
+.minibio2 .galeria .texto2{
     grid-column: 2;
     grid-row: 2;
     height: auto;
     width: auto;
     padding: 10px;
-    color: black;
+    color: whitesmoke;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size:medium;
     text-align: center;
@@ -268,15 +275,44 @@
     grid-area: formulario;
     height: 700px;
     width: 100%;
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;   
 }
-.tabla{
+.listadoClases{
     grid-area: formulario;
-    height: 700px;
+    height: 200px;
     width: 100%;
+}
+.listadoClases .listado{
+    margin-left: 5%;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+}
+.listadoClases .tabla{
+    height: 80%;
+    width: 90%;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:medium;
+    text-align: center;
+}
+.listadoClases .subtitulo{
+    height: auto;
+    width: auto;
+    padding: 10px;
+    color: goldenrod;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:medium;
+    text-align: center;
 }
 
 /* estilado de footer */
-.footer{
+.footer1{
     grid-area: footer;
     height: 100px;
     width: 100%;
@@ -287,24 +323,24 @@
     justify-content: space-between;
     align-items: center;
 }
-.footer .logo{
+.footer1 .logo{
     width: auto;
     height: 50px;
     border-radius: 20%;
 }
-.footer ul{
+.footer1 ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
 }
-.footer li{
+.footer1 li{
     width: auto;
     padding: 10px;
     font-family: 'Montserrat Alternates', sans-serif;
     text-align: center;
     color: #003366;
 }
-.footer .menuNavegacion ul a{
+.footer1 .menuNavegacion ul a{
     text-decoration: none;
     color: goldenrod;
     background-color: #003366;
@@ -314,15 +350,65 @@
     width: 5%;
     height: auto;
 }
-.footer .menuNavegacion ul a:hover{
+.footer1 .menuNavegacion ul a:hover{
+    background-color: #ece6ff;
+}
+
+.footer2{
+    grid-area: footer;
+    height: 100px;
+    width: 100%;
+    padding: 1rem;
+    background-color: #003366;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer2 .logo{
+    width: auto;
+    height: 50px;
+    border-radius: 20%;
+}
+.footer2 ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.footer2 li{
+    width: auto;
+    padding: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    color: #003366;
+}
+.footer2 .menuNavegacion ul a{
+    text-decoration: none;
+    color: goldenrod;
+    background-color: #003366;
+    margin: 0 15px;
+    padding: 15px;
+    border-radius: 50px;
+    width: 5%;
+    height: auto;
+}
+.footer2 .menuNavegacion ul a:hover{
     background-color: #ece6ff;
 }
 
 /* estilado para tablet */
 @media only screen and (min-width: 768px) {
-    .body{
+    .body1{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 700px 1180px 100px;
+    }
+    .body2{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 700px 1010px 100px;
+    }
+    .body3{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 700px 1010px 200px 100px;
     }
     .menu{
         grid-column: 1/4;
@@ -332,23 +418,41 @@
       grid-column: 1/4;
       grid-row: 2;
     }
-    .minibio{
+    .minibio1{
         grid-column: 1/4;
         grid-row: 3;
     }
-    .footer{
+    .minibio2{
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    .footer1{
         grid-column: 1/4;
         grid-row: 4;
     } 
+    .listadoClases{
+        grid-column: 1/4;
+        grid-row: 4; 
+    }
+    .footer1{
+        grid-column: 1/4;
+        grid-row: 5;
+    } 
 }
-
-
 
 /* /* estilado para descktop */
 @media only screen and (min-width: 1024px) {
-    .body{
+    .body1{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 700px 1180px 100px;
+    }
+    .body2{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 700px 1010px 100px;
+    }
+    .body3{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 700px 1010px 200px 100px;
     }
     .menu{
         grid-column: 1/4;
@@ -358,12 +462,24 @@
       grid-column: 1/4;
       grid-row: 2;
     }
-    .minibio{
+    .minibio1{
         grid-column: 1/4;
         grid-row: 3;
     }
-    .footer{
+    .minibio2{
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    .footer1{
         grid-column: 1/4;
         grid-row: 4;
+    } 
+    .listadoClases{
+        grid-column: 1/4;
+        grid-row: 4; 
+    }
+    .footer1{
+        grid-column: 1/4;
+        grid-row: 5;
     } 
 }
