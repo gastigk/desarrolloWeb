@@ -4,45 +4,43 @@
     box-sizing: border-box;
 }
 /* grid para estructura del sitio */
-.body1{
-    background-image: linear-gradient(to bottom, #003366 , #ece6ff);
+.body1,
+.body2,
+.body3{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+}
+.body1,
+.body2,
+.body4{
     grid-template-areas: "header header header"
                          "encabezado encabezado encabezado"
                          "main main main"
                          "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
+}
+.body1{
+    background-image: linear-gradient(to bottom, #003366 , #ece6ff);
     grid-template-rows: 100px 700px 1180px 100px;
-    height: 100%;
-    width: 100%;
-    gap: 10px;
 }
 .body2{
     background-image: linear-gradient(to bottom, #ece6ff, #003366);
-    display: grid;
-    grid-template-areas: "header header header"
-                         "encabezado encabezado encabezado"
-                         "main main main"
-                         "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 700px 1010px 100px;
-    height: 100%;
-    width: 100%;
-    gap: 10px;
 }
 .body3{
     background-image: linear-gradient(to bottom, #ece6ff, #003366);
-    display: grid;
     grid-template-areas: "header header header"
                          "encabezado encabezado encabezado"
                          "main main main"
                          "formulario formulario formulario"
                          "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 700px 1010px 200px 100px;
-    height: 100%;
-    width: 100%;
-    gap: 10px;
+}
+.body4{
+    background-image: linear-gradient(to bottom, #003366 , #ece6ff);
+    grid-template-rows: 100px 700px 250px 100px;
 }
 
 /* estilado para menú */
@@ -98,38 +96,38 @@
     justify-content: center;
     align-content: center;                     
 }
+.encabezado .portada .imagenEncabezado,
+.encabezado .portada .titulo,
+.encabezado .portada .texto{
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}   
 .encabezado .portada .imagenEncabezado{
-    grid-column: 1 / 4;
+    grid-column: 1/4;
     grid-row: 1;
     height: 90%;
     width: 60%;
     padding: 5px;
-    justify-self: center;
-    align-self: center;
 }
 .encabezado .portada .titulo{
     grid-column: 2;
     grid-row: 2;
     color: goldenrod;
-    font-family: 'Montserrat Alternates', sans-serif;
     font-size: xx-large;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
+
 }
 .encabezado .portada .texto{
     grid-column: 2;
     grid-row: 3;
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
     font-size: large;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
 }
 
 /* estilado de minibio */
-.minibio1{
+.minibio1,
+.minibio3{
     grid-area: main;
     height: 1180px;
     width: 100%;
@@ -151,58 +149,35 @@
     justify-content: center;
     align-content: center;                     
 }
-.minibio1 .galeria .imagen1{
-    grid-column: 1;
-    grid-row: 1;
+.minibio1 .galeria .imagen1,
+.minibio1 .galeria .imagen2,
+.minibio1 .galeria .imagen3,
+.minibio1 .galeria .imagen4{
     height: 500px;
     width: auto;
     padding: 5px;
     justify-self: center;
     align-self: center;
+}
+.minibio1 .galeria .imagen1{
+    grid-column: 1;
+    grid-row: 1;
 }
 .minibio1 .galeria .imagen2{
     grid-column: 2;
     grid-row: 1;
-    height: 500px;
-    width: auto;
-    padding: 5px;
-    justify-self: center;
-    align-self: center;
-}
-.minibio1 .galeria .texto1{
-    grid-column: 1/3;
-    grid-row: 2;
-    height: 90px;
-    width: auto;
-    padding: 10px;
-    color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size:medium;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
 }
 .minibio1 .galeria .imagen3{
     grid-column: 1;
     grid-row: 3;
-    height: 500px;
-    width: auto;
-    padding: 5px;
-    justify-self: center;
-    align-self: center;
+
 }
 .minibio1 .galeria .imagen4{
     grid-column: 2;
     grid-row: 3;
-    height: 500px;
-    width: auto;
-    padding: 5px;
-    justify-self: center;
-    align-self: center;
 }
+.minibio1 .galeria .texto1,
 .minibio1 .galeria .texto2{
-    grid-column: 1/3;
-    grid-row: 4;
     height: 90px;
     width: auto;
     padding: 10px;
@@ -212,6 +187,14 @@
     text-align: center;
     justify-self: center;
     align-self: center;
+}
+.minibio1 .galeria .texto1{
+    grid-column: 1/3;
+    grid-row: 2;
+}
+.minibio1 .galeria .texto2{
+    grid-column: 1/3;
+    grid-row: 4;
 }
 
 /* .minibio2 */
@@ -225,68 +208,126 @@
     justify-content: center;
     align-content: center;                     
 }
-.minibio2 .galeria .imagen1{
-    grid-column: 1;
-    grid-row: 1;
+.minibio2 .galeria .imagen1,
+.minibio2 .galeria .imagen2{
     height: 100%;
     width: auto;
     padding: 25px;
     justify-self: center;
     align-self: center;
 }
+.minibio2 .galeria .imagen1{
+    grid-column: 1;
+    grid-row: 1;
+}
 .minibio2 .galeria .imagen2{
     grid-column: 1;
     grid-row: 2;
-    height: 100%;
+}
+.minibio2 .galeria .texto1,
+.minibio2 .galeria .texto2{
+    height: auto;
     width: auto;
-    padding: 5px;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:medium;
+    text-align: center;
     justify-self: center;
     align-self: center;
 }
 .minibio2 .galeria .texto1{
     grid-column: 2;
     grid-row: 1;
-    height: auto;
-    width: auto;
-    padding: 10px;
-    color: whitesmoke;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size:medium;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
 }
 .minibio2 .galeria .texto2{
     grid-column: 2;
     grid-row: 2;
-    height: auto;
+}
+
+/* .minibio3 */
+.minibio3 .galeria{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: 500px 500px;
+    align-items: stretch;
+    gap: 5px;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;                     
+}
+.minibio3 .galeria .imagen1,
+.minibio3 .galeria .imagen2,
+.minibio3 .galeria .imagen3,
+.minibio3 .galeria .imagen4{
+    height: 500px;
     width: auto;
-    padding: 10px;
-    color: whitesmoke;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size:medium;
-    text-align: center;
+    border: solid #003366;
     justify-self: center;
     align-self: center;
 }
+.minibio3 .galeria .imagen1{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+.minibio3 .galeria .imagen2{
+    grid-column: 3/6;
+    grid-row: 1;
+}
+.minibio3 .galeria .imagen3{
+    grid-column: 1/3;
+    grid-row: 2;
+}
+.minibio3 .galeria .imagen4{
+    grid-column: 3/6;
+    grid-row: 2;
+}
+
 
 /* estilado de formulario/ tabla */
 .formulario{
-    grid-area: formulario;
-    height: 700px;
+    grid-area: main;
+    height: 200px;
     width: 100%;
     align-items: stretch;
     justify-items: stretch;
     justify-content: center;
     align-content: center;   
 }
+.formulario .contacto{
+    margin-left: 5% ;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+}
+.listadoClases .tabla{
+    height: 80%;
+    width: 90%;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:medium;
+    text-align: center;
+}
+.formulario .subtitulo{
+    height: auto;
+    width: auto;
+    padding: 10px;
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:medium;
+    text-align: center;
+}
+
 .listadoClases{
     grid-area: formulario;
     height: 200px;
     width: 100%;
 }
 .listadoClases .listado{
-    margin-left: 5%;
+    margin-left: 5% ;
     align-items: center;
     justify-items: center;
     justify-self: center;
@@ -312,48 +353,7 @@
 }
 
 /* estilado de footer */
-.footer1{
-    grid-area: footer;
-    height: 100px;
-    width: 100%;
-    padding: 1rem;
-    background-color: #003366;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer1 .logo{
-    width: auto;
-    height: 50px;
-    border-radius: 20%;
-}
-.footer1 ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-}
-.footer1 li{
-    width: auto;
-    padding: 10px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: center;
-    color: #003366;
-}
-.footer1 .menuNavegacion ul a{
-    text-decoration: none;
-    color: goldenrod;
-    background-color: #003366;
-    margin: 0 15px;
-    padding: 15px;
-    border-radius: 50px;
-    width: 5%;
-    height: auto;
-}
-.footer1 .menuNavegacion ul a:hover{
-    background-color: #ece6ff;
-}
-
+.footer1,
 .footer2{
     grid-area: footer;
     height: 100px;
@@ -365,16 +365,19 @@
     justify-content: space-between;
     align-items: center;
 }
+.footer1 .logo,
 .footer2 .logo{
     width: auto;
     height: 50px;
     border-radius: 20%;
 }
+.footer1 ul,
 .footer2 ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
 }
+.footer1 li,
 .footer2 li{
     width: auto;
     padding: 10px;
@@ -382,6 +385,7 @@
     text-align: center;
     color: #003366;
 }
+.footer1 .menuNavegacion ul a,
 .footer2 .menuNavegacion ul a{
     text-decoration: none;
     color: goldenrod;
@@ -392,9 +396,11 @@
     width: 5%;
     height: auto;
 }
+.footer1 .menuNavegacion ul a:hover,
 .footer2 .menuNavegacion ul a:hover{
     background-color: #ece6ff;
 }
+
 
 /* estilado para tablet */
 @media only screen and (min-width: 768px) {
@@ -426,6 +432,10 @@
         grid-column: 1/4;
         grid-row: 3;
     }
+    .minibio3{
+        grid-column: 1/4;
+        grid-row: 3;
+    }
     .footer1{
         grid-column: 1/4;
         grid-row: 4;
@@ -434,7 +444,7 @@
         grid-column: 1/4;
         grid-row: 4; 
     }
-    .footer1{
+    .footer2{
         grid-column: 1/4;
         grid-row: 5;
     } 
@@ -470,6 +480,10 @@
         grid-column: 1/4;
         grid-row: 3;
     }
+    .minibio3{
+        grid-column: 1/4;
+        grid-row: 3;
+    }
     .footer1{
         grid-column: 1/4;
         grid-row: 4;
@@ -478,7 +492,7 @@
         grid-column: 1/4;
         grid-row: 4; 
     }
-    .footer1{
+    .footer2{
         grid-column: 1/4;
         grid-row: 5;
     } 
