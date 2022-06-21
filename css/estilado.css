@@ -107,8 +107,8 @@
 .encabezado .portada .imagenEncabezado{
     grid-column: 1/4;
     grid-row: 1;
-    height: 90%;
-    width: 60%;
+    height: max(90%, 500px);
+    width: auto;
     padding: 5px;
 }
 .encabezado .portada .titulo{
@@ -497,3 +497,23 @@
         grid-row: 5;
     } 
 }
+
+/* animaciones */
+
+.encabezado .portada .imagenEncabezado{
+    animation-duration: 5s;
+    animation-name: aparecer;
+    animation-iteration-count:initial;
+ }
+ 
+ 
+ @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ 
+ 
