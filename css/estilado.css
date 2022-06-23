@@ -450,7 +450,7 @@
 }
 
 /* estilado para tablet */
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .body1{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 700px 1180px 100px;
@@ -546,7 +546,7 @@
 }
 
 /* estilado para descktop */
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     .body1{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 700px 1180px 100px;
