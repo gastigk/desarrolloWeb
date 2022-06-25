@@ -83,8 +83,11 @@
 /* estilado de encabezado */
 .encabezado{
     grid-area: encabezado;
-    height: 700px;
+    height: 100%;
+    max-height: 500px;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .encabezado .portada{
     display: grid;
@@ -107,7 +110,7 @@
 .encabezado .portada .imagenEncabezado{
     grid-column: 1/4;
     grid-row: 1;
-    height: max(80%, 350px);
+    height: 100%;
     width: auto;
     padding: 5px;
 }
